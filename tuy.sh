@@ -8,7 +8,7 @@ START_SH="/data/data/com.termux/files/home/YOUChat_Proxy/start.sh"
 update_youchat_proxy() {
     echo "正在更新YOUChat_Proxy..."
     cd YOUChat_Proxy
-    git pull origin main
+    git pull 
     echo "更新完成！"
 }
 
