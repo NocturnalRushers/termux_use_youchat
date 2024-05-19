@@ -8,8 +8,8 @@ then
 fi
 
 # 克隆YOUChat_Proxy项目
-git clone https://github.com/NocturnalRushers/YOUChat_Proxy.git
-cd YOUChat_Proxy
+git clone https://github.com/NocturnalRushers/Youchat_proxy_ter.git
+cd Youchat_proxy_ter
 
 # 检查是否需要更新包
 echo "检查是否需要更新包..."
