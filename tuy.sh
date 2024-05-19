@@ -162,7 +162,7 @@ while true; do
             ;;
         5)
              # 更新脚本
-            curl -O https://github.com/NocturnalRushers/termux_use_youchat/blob/main/tuy.sh
+            curl -O https://raw.githubusercontent.com/NocturnalRushers/termux_use_youchat/main/tuy.sh
 	    echo -e "重启终端或者输入bash tuy.sh重新进入脚本"
             break ;;
         *)
