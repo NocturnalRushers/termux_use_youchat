@@ -28,6 +28,7 @@ npm install
 echo "是否要启动第二个脚本tuy.sh？(y/n)"
 read launch_choice
 if [ "$launch_choice" = "y" ]; then
+cd /data/data/com.termux/files/home
 curl -O https://raw.githubusercontent.com/NocturnalRushers/termux_use_youchat/main/tuy.sh && chmod +x tuy.sh && ./tuy.sh
 else
     echo "退出当前脚本。"
