@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # 定义配置文件路径
-CONFIG_JS="/data/data/com.termux/files/home/YOUChat_Proxy/config.js"
-START_SH="/data/data/com.termux/files/home/YOUChat_Proxy/start.sh"
+CONFIG_JS="/data/data/com.termux/files/home/Youchat_proxy_ter/config.js"
+START_SH="/data/data/com.termux/files/home/Youchat_proxy_ter/start.sh"
 
 # 更新YOUChat_Proxy函数
 update_youchat_proxy() {
     echo "正在更新YOUChat_Proxy..."
-    cd YOUChat_Proxy
+    cd Youchat_proxy_ter
     git pull 
     echo "更新完成！"
 }
@@ -152,16 +152,16 @@ echo -e "
 一键YouProxy使用脚本
 运行时需要稳定的魔法网络环境"
 while true; do
-    echo "1. 启动YOUChat_Proxy"
+    echo "1. 启动YOU_Proxy"
     echo "2. 添加cookie和user_agent"
     echo "3. 修改start.sh"
     echo "4. 更新脚本"
-    echo "5. 更新YOUChat_Proxy"
+    echo "5. 更新YOU_Proxy"
     echo "6. 退出"
     read -p "请输入选项: " menu_choice
     case $menu_choice in
         1)
-            cd /data/data/com.termux/files/home/YOUChat_Proxy && chmod +x start.sh && ./start.sh
+            cd /data/data/com.termux/files/home/Youchat_proxy_ter && chmod +x start.sh && ./start.sh
 	    ;;
         2)
             edit_config_js
