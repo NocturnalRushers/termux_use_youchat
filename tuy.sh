@@ -140,31 +140,35 @@ echo -e "
 一键YouProxy使用脚本
 运行时需要稳定的魔法网络环境"
 while true; do
-    echo "1. 更新YOUChat_Proxy"
-    echo "2. 更改config.js"
+    echo "1. 启动YOUChat_Proxy"
+    echo "2. 添加cookie和user_agent"
     echo "3. 修改start.sh"
-    echo "4. 退出"
-    echo "5. 更新脚本"
+    echo "4. 更新脚本"
+    echo "5. 更新YOUChat_Proxy"
+    echo "6. 退出"
     read -p "请输入选项: " menu_choice
     case $menu_choice in
         1)
-            update_youchat_proxy
-            ;;
+            cd YOUChat_Proxy && ./start.sh
         2)
             edit_config_js
             ;;
         3)
             edit_start_sh
             ;;
+
         4)
-            echo "退出脚本。"
-            break
-            ;;
-        5)
              # 更新脚本
             curl -O https://raw.githubusercontent.com/NocturnalRushers/termux_use_youchat/main/tuy.sh
 	    echo -e "重启终端或者输入bash tuy.sh重新进入脚本"
-            break ;;
+            ;;
+	5)
+            update_youchat_proxy
+            ;;
+	6)
+            echo "退出脚本。"
+            break
+            ;;
         *)
             echo "无效选项"
             ;;
