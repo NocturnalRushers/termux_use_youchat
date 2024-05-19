@@ -149,7 +149,7 @@ while true; do
     read -p "请输入选项: " menu_choice
     case $menu_choice in
         1)
-            cd YOUChat_Proxy && ./start.sh
+            cd /data/data/com.termux/files/home/YOUChat_Proxy && ./start.sh
 	    ;;
         2)
             edit_config_js
