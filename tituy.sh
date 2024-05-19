@@ -8,7 +8,7 @@ then
 fi
 
 # 克隆YOUChat_Proxy项目
-git https://github.com/NocturnalRushers/YOUChat_Proxy.git
+git clone https://github.com/NocturnalRushers/YOUChat_Proxy.git
 cd YOUChat_Proxy
 
 # 检查是否需要更新包
