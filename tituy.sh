@@ -23,6 +23,7 @@ then
 fi
 
 # 安装依赖
+npm install
 
 echo "是否要启动第二个脚本tuy.sh？(y/n)"
 read launch_choice
