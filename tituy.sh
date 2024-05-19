@@ -1,11 +1,36 @@
 #!/bin/bash
 
-# 检查并安装git
-if ! command -v git &> /dev/null
-then
-    echo "git 未安装，正在安装 git..."
-    pkg install git -y
+# Check if 'apt' is available
+if ! command -v apt &> /dev/null; then
+    echo "Error: 'apt' package manager is not available."
+    exit 1
 fi
+
+# Check and install 'apt update'
+if ! apt list --upgradable &> /dev/null; then
+    echo "Running 'apt update'..."
+    apt update
+fi
+
+# Check and install 'apt upgrade'
+if ! apt list --upgradable &> /dev/null; then
+    echo "Running 'apt upgrade'..."
+    apt upgrade -y
+fi
+
+# Check and install 'nodejs'
+if ! command -v node &> /dev/null; then
+    echo "Installing 'nodejs'..."
+    apt install nodejs -y
+fi
+
+# Check and install 'git'
+if ! command -v git &> /dev/null; then
+    echo "Installing 'git'..."
+    apt install git -y
+fi
+
+echo "All required packages are installed."
 
 # 克隆YOUChat_Proxy项目
 git clone https://github.com/NocturnalRushers/Youchat_proxy_ter.git
