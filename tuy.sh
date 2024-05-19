@@ -17,7 +17,9 @@ edit_config_js() {
     local choice
     echo "1. 添加cookie"
     echo "2. 添加user_agent"
-    echo "3. 删除所有cookie和user_agent"
+    echo "3. 删除cookie"
+    echo "4. 删除user_agent"
+    echo "5. 删除所有cookie和user_agent"
     read -p "请选择一个选项: " choice
     case $choice in
         1)
@@ -32,7 +34,17 @@ edit_config_js() {
             sed -i "/\"user_agent\":/c\    \"user_agent\": \"$user_agent\"" $CONFIG_JS
             echo "user_agent已添加。"
             ;;
-        3)
+	3)
+            # 删除所有cookie
+            sed -i "/\"cookie\":/c\    \"cookie\": \"\"," $CONFIG_JS
+            echo "所有cookie已删除。"
+            ;;  
+	4)
+            # 删除所有user_agent
+            sed -i "/\"user_agent\":/c\    \"user_agent\": \"\"" $CONFIG_JS
+            echo "所有user_agent已删除。"
+            ;;
+        5)
             # 删除所有cookie和user_agent
             sed -i "/\"cookie\":/c\    \"cookie\": \"\"," $CONFIG_JS
             sed -i "/\"user_agent\":/c\    \"user_agent\": \"\"" $CONFIG_JS
