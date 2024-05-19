@@ -150,6 +150,7 @@ while true; do
     case $menu_choice in
         1)
             cd YOUChat_Proxy && ./start.sh
+	    ;;
         2)
             edit_config_js
             ;;
