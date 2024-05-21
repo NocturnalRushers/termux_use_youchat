@@ -21,13 +21,13 @@ fi
 # Check and install 'nodejs'
 if ! command -v node &> /dev/null; then
     echo "Installing 'nodejs'..."
-    apt install nodejs -y
+    pkg install nodejs -y
 fi
 
 # Check and install 'git'
 if ! command -v git &> /dev/null; then
     echo "Installing 'git'..."
-    apt install git -y
+    pkg install git -y
 fi
 
 echo "All required packages are installed."
