@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#版本号
+version="Ver1.0.0"
+latest_version=$(curl -s https://raw.githubusercontent.com/NocturnalRushers/termux_use_youchat/main/VERSION)
 # 定义配置文件路径
 CONFIG_JS="/data/data/com.termux/files/home/Youchat_proxy_ter/config.js"
 START_SH="/data/data/com.termux/files/home/Youchat_proxy_ter/start.sh"
@@ -150,6 +153,8 @@ edit_start_sh() {
 echo -e "                                              
 ————————主菜单————————
 一键YouProxy使用脚本
+版本：$version
+最新：\033[0;33m$latest_version\033[0m
 运行时需要稳定的魔法网络环境"
 while true; do
     echo "1. 启动YOU_Proxy"
